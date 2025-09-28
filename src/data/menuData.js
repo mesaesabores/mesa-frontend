@@ -29,10 +29,16 @@ export const menuData = {
     name: "Segunda-feira",
     options: [
       {
-        id: "segunda_indisponivel",
-        title: "Cardápio disponível em breve",
-        description: "Nosso cardápio de segunda-feira ficará disponível em breve.",
-        image: null
+        id: "sabado_opcao_1",
+        title: "Opção 01",
+        description: "Arroz, feijão, pernil assado, creme de milho, farofa, salada de alface, tomate, pepino.",
+        image: quintaopcao1
+      },
+      {
+        id: "sabado_opcao_2",
+        title: "Opção 02",
+        description: "Arroz, feijão, peito de frango refogado, brócolis cozido, couve-flor cozida, salada de alface, tomate, cenoura ralada.",
+        image: quintaopcao2
       }
     ]
   },
@@ -40,10 +46,16 @@ export const menuData = {
     name: "Terça-feira",
     options: [
       {
-        id: "terca_indisponivel",
-        title: "Cardápio disponível em breve",
-        description: "Nosso cardápio de terça-feira ficará disponível em breve.",
-        image: null
+        id: "sabado_opcao_1",
+        title: "Opção 01",
+        description: "Arroz, feijão, pernil assado, creme de milho, farofa, salada de alface, tomate, pepino.",
+        image: quintaopcao1
+      },
+      {
+        id: "sabado_opcao_2",
+        title: "Opção 02",
+        description: "Arroz, feijão, peito de frango refogado, brócolis cozido, couve-flor cozida, salada de alface, tomate, cenoura ralada.",
+        image: quintaopcao2
       }
     ]
   },
@@ -51,10 +63,16 @@ export const menuData = {
     name: "Quarta-feira",
     options: [
       {
-        id: "quarta_indisponivel",
-        title: "Cardápio disponível em breve",
-        description: "Nosso cardápio de quarta-feira ficará disponível em breve.",
-        image: null
+        id: "sabado_opcao_1",
+        title: "Opção 01",
+        description: "Arroz, feijão, pernil assado, creme de milho, farofa, salada de alface, tomate, pepino.",
+        image: quintaopcao1
+      },
+      {
+        id: "sabado_opcao_2",
+        title: "Opção 02",
+        description: "Arroz, feijão, peito de frango refogado, brócolis cozido, couve-flor cozida, salada de alface, tomate, cenoura ralada.",
+        image: quintaopcao2
       }
     ]
   },
@@ -108,22 +126,39 @@ export const menuData = {
         image: quintaopcao2
       }
     ]
+  },
+  domingo: {
+    name: "Domingo",
+    options: [
+      {
+        id: "sabado_opcao_1",
+        title: "Opção 01",
+        description: "Arroz, feijão, pernil assado, creme de milho, farofa, salada de alface, tomate, pepino.",
+        image: quintaopcao1
+      },
+      {
+        id: "sabado_opcao_2",
+        title: "Opção 02",
+        description: "Arroz, feijão, peito de frango refogado, brócolis cozido, couve-flor cozida, salada de alface, tomate, cenoura ralada.",
+        image: quintaopcao2
+      }
+    ]
   }
 };
 
-export const dayKeys = ['segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado'];
+export const dayKeys = ["domingo", "segunda", "terca", "quarta", "quinta", "sexta", "sabado"];
 
 export const getCurrentDay = () => {
   const today = new Date().getDay();
   const dayMap = {
-    1: 'segunda',
-    2: 'terca',
-    3: 'quarta',
-    4: 'quinta',
-    5: 'sexta',
-    6: 'sabado',
-    0: 'segunda' // domingo volta para segunda
+    0: "domingo", // domingo
+    1: "segunda",
+    2: "terca",
+    3: "quarta",
+    4: "quinta",
+    5: "sexta",
+    6: "sabado",
   };
-  return dayMap[today] || 'segunda';
+  return dayMap[today] || "segunda";
 };
 

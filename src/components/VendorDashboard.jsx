@@ -10,7 +10,7 @@ const VendorDashboard = () => {
   const [refreshing, setRefreshing] = useState(false);
 
   // URL base da API - ajuste conforme necessário
-  const API_BASE = 'mesa-backend.vercel.app/api';
+  const API_BASE = 'https://8xhpiqcv1693.manus.space/api';
 
   const handleLogin = () => {
     setIsAuthenticated(true);
