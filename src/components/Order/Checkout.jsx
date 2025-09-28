@@ -72,7 +72,7 @@ const Checkout = ({ cartItems, totalPrice, onBack }) => {
       };
 
       // Enviar pedido para o backend
-      const response = await fetch('https://8xhpiqcv1693.manus.space/api/orders', {
+      const response = await fetch('mesa-backend.vercel.app/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
