@@ -10,7 +10,7 @@ const Dashboard = () => {
   const [refreshing, setRefreshing] = useState(false);
 
   // URL base da API - ajuste conforme necessário
-  const API_BASE = 'http://localhost:5001/api';
+  const API_BASE = 'mesa-backend.vercel.app/api';
 
   const fetchOrders = async () => {
     try {
